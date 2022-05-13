@@ -310,7 +310,7 @@ class _InputCodeFieldState extends State<InputCodeField>
     control._setCodeConfiguration(widget.count, widget.obscure);
 
     if (widget.autofocus) {
-      WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+      WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
         if (mounted) {
           FocusScope.of(context).autofocus(control.focusNode);
         }
@@ -482,5 +482,20 @@ class _InputCodeFieldState extends State<InputCodeField>
 
     control.removeListener(_notifyState);
     control._dispose();
+  }
+
+  @override
+  void insertTextPlaceholder(Size size) {
+    // No-op: this is for scribble
+  }
+
+  @override
+  void removeTextPlaceholder() {
+    // No-op: this is for scribble
+  }
+
+  @override
+  void showToolbar() {
+    // No-op: this is for scribble
   }
 }
