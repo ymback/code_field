@@ -498,4 +498,12 @@ class _InputCodeFieldState extends State<InputCodeField>
   void showToolbar() {
     // No-op: this is for scribble
   }
+
+  @override
+  void didChangeInputControl(TextInputControl? oldControl, TextInputControl? newControl) {
+  }
+
+  @override
+  void performSelector(String selectorName) {
+  }
 }
